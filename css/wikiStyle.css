@@ -1,0 +1,29 @@
+body{font-family: 'Quicksand', sans-serif;  font-size:17px;}
+h4{font-weight:700;}
+.panel{text-align:left;}
+.pl,.rs{
+  margin:0;padding-left:5px;padding-bottom:5px;padding-top:5px;z-index:2;
+position:absolute;   
+  display:none;
+}
+.pb, .rspb{margin:0; padding:3px;font-weight:700;font-size:14px; }
+.rspb{font-weight:400;font-style: italic;}
+.grid{display:none;
+  font-family: 'Crimson Text', serif;
+  font-size:17px;
+ }
+.btn{margin-bottom:5%}
+.form{
+  margin:auto;padding-top:20%;
+  padding-bottom:10%
+}
+.formdw{
+  margin-top:20px; z-index:1;
+  }
+.pb:hover{background-color:rgb(200,200,200);
+cursor:pointer;}
+.rspb:hover{background-color:rgb(200,200,200);
+cursor:pointer;}
+a{color:black;}
+a:hover{text-decoration:none;}
+

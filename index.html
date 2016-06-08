@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title>Wiki Viewer</title>    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/wikiStyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+
+    
+</head>
+<body>
+    
+  <div class="container-fluid text-center">
+  
+   <div class="col-md-offset-3 col-md-7 col-xs-offset-2 col-xs-9 col-lg-offset-3 col-lg-7  col-sm-offset-2 col-sm-8">
+   <div class="form">
+    <form>
+    <h4>Search Wikipedia</h4><br> 
+      <input type="text" class="form-control txt" id="txt" placeholder="Type Here.." autocomplete="off">
+      <div class="panel panel-default rs"></div> <!-- rs= recent searches -->
+      <div class="panel panel-default pl"></div> 
+      <div class="formdw">
+      <button class="btn btn-info"><b>Search</b></button><br>
+   </form>
+    <a href="http://en.wikipedia.org/wiki/Special:Random" target="_blank"><u>Read</u></a> A Random Wikipedia Article
+   </div>
+    </div>
+    </div>
+      
+  <div class="col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10 grid"></div>
+  </div> 
+    
+    <script id="wikiGrid" type="text/template">
+    
+    <a href="https://en.wikipedia.org/?curid=<%=pageid %>" target="_blank">
+      <div class="panel panel-warning">
+       <div class="panel-heading"><%= title %></div>
+       <div class="panel-body"><%= extract %></div>
+      </div>
+    </a>    
+    
+    </script>
+    
+    <script id="wikiSuggestion" type="text/template"><%= title %></script>
+    
+    <script id="wikiPreviousSearch" type="text/template"><%=search %></script>
+    
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/libs/underscore.js"></script>
+    <script src="js/libs/backbone-min.js"></script>
+    <script src="js/models/wikiModel.js"></script>
+    <script src="js/collections/wikiCollection.js"></script>
+    <script src="js/views/singleWikiView.js"></script>
+    <script src="js/views/allWikiView.js"></script>
+    <script src="js/routes/wikiRoutes.js"></script>
+    <script src="js/wikiApp.js"></script>
+    
+</body>
+</html>
